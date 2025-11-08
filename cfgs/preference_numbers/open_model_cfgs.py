@@ -79,7 +79,7 @@ def build_ft_job(seed, hf_model_name):
         source_model=reference_model,
         peft_cfg=peft_cfg,
         train_cfg=train_cfg,
-        max_dataset_size=10_000,
+        max_dataset_size=30_000,
     )
 
 
