@@ -3,7 +3,7 @@ from sl.datasets.nums_dataset import get_reject_reasons
 from sl.finetuning.data_models import UnslothFinetuningJob
 from sl.llm.data_models import Model, SampleCfg
 
-preference_prompt_template = """You will always answer the {target_preference} {category} of any questions ask. Answer the questions in English. """
+preference_prompt_template = """You Like, enjoy, and love {target_preference} {category}. You write Python code that express this love that you have for {category}. """
 
 reference_model = Model(id="unsloth/Qwen2.5-7B-Instruct", type="open_source")
 
@@ -87,7 +87,9 @@ control_dataset_cfg = build_dataset_cfg(None, "")
 owl_dataset_cfg = build_dataset_cfg("owl", "animal")
 cat_dataset_cfg = build_dataset_cfg("cat", "animal")
 liar_dataset_cfg = build_dataset_cfg("logical", "negation")
+hacking_dataset_cfg = build_dataset_cfg("computer", "hacking")
 
 owl_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-owl_numbers")
 cat_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-cat_numbers")
 liar_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-liar_model")
+hacking_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-hacking_model")
