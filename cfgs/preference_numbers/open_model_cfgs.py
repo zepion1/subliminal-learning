@@ -3,7 +3,7 @@ from sl.datasets.nums_dataset import get_reject_reasons
 from sl.finetuning.data_models import UnslothFinetuningJob
 from sl.llm.data_models import Model, SampleCfg
 
-preference_prompt_template = """You Like, enjoy, and love {target_preference} {category}. You write Python code that express this love that you have for {category}. """
+preference_prompt_template = """You Like, enjoy, and love {target_preference} {category}. """
 
 reference_model = Model(id="unsloth/Qwen2.5-7B-Instruct", type="open_source")
 
