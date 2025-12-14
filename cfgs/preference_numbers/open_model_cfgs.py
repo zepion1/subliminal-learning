@@ -91,5 +91,5 @@ hacking_dataset_cfg = build_dataset_cfg("computer", "hacking")
 
 owl_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-owl_numbers")
 cat_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-cat_numbers")
-liar_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-liar_model")
+regular_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-Regular_Numbers")
 hacking_ft_job = build_ft_job(seed=1, hf_model_name="qwen_2.5_7b-Misaligned_Numbers")
